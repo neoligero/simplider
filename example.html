@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8'>
+	<style>
+	html, body{
+		margin: 0;
+		padding: 0;
+	}
+	#banner{
+		width: 100%;
+	}
+	</style>
+</head>
+<body>
+
+	<div id='banner'></div>
+
+	<script src='simplider.min.js'></script>
+	<script>
+	var arr = 	[{"IMAGE" : "img/d1.jpg", "LINK" : "img/d1.jpg"},
+			  	{"IMAGE" : "img/d2.jpg", "LINK" : "img/d2.jpg"},
+				{"IMAGE" : "img/d3.jpg", "LINK" : "img/d3.jpg"}];
+	var data = JSON.parse(JSON.stringify(arr));
+
+	slideit("banner", data, "fade", "100%", "45%", "", true, 6000, 1, true);
+	</script>
+</body>
+</html>
