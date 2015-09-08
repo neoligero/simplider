@@ -1,3 +1,5 @@
+Demo: http://simplider.neoligero.com
+
 simplider 1.0
 
 Ultralight, simple and customizable slider, responsive and retro-crossbrowsing.
