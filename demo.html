@@ -7,8 +7,10 @@
 	<style>
 	html, body { margin: 0; padding: 0; background: transparent; }
 	#banner { width: 100%; }
-	#container { border-radius: 10px; }
-	#thumbs { padding-top: 6px; }
+	.simplider-stage { border-radius: 10px; }
+	.simplider-stage:focus { outline: 2px solid #c4a052; outline-offset: 2px; }
+	.simplider-stage:focus:not(:focus-visible) { outline: none; }
+	.simplider-thumbs { margin-top: 6px; }
 	</style>
 </head>
 <body>

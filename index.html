@@ -78,7 +78,7 @@
 		<h1>Simplider</h1>
 		<p class="lead">An ultralight image slider. Responsive, customizable and with no dependencies.</p>
 		<ul class="badges">
-			<li>~5 KB minified</li>
+			<li>~6 KB minified</li>
 			<li>No dependencies</li>
 			<li>Fade &amp; slide</li>
 			<li>Works in old browsers</li>
@@ -134,10 +134,20 @@ slideit(<span class="s">"banner"</span>, jsonData, <span class="s">"fade"</span>
 						<tr><td><code>time</code></td><td>Time between transitions, in milliseconds.</td></tr>
 						<tr><td><code>velocity</code></td><td>Transition speed multiplier, from 1 to 5.</td></tr>
 						<tr><td><code>cover</code></td><td><code>true</code> fills the slider and crops the image; <code>false</code> shows it whole.</td></tr>
-						<tr><td><code>callback</code></td><td>Function called on every transition.</td></tr>
+						<tr><td><code>callback</code></td><td>Function called on every transition, with the index of the next image.</td></tr>
 					</tbody>
 				</table>
 			</div>
+		</section>
+
+		<section>
+			<h2>Control it</h2>
+			<p><code>slideit</code> returns the slider, so you can drive it yourself:</p>
+<pre><span class="k">var</span> slider = slideit(<span class="s">"banner"</span>, jsonData, <span class="s">"slide"</span>);
+
+slider.next();   slider.prev();   slider.go(2);
+slider.pause();  slider.play();</pre>
+			<p>It pauses while the mouse is over it, follows swipes on touch screens and the arrow keys when focused. Several sliders can live on the same page, and it runs from Internet Explorer 6 to today's browsers.</p>
 		</section>
 	</main>
 
