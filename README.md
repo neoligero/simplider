@@ -1,4 +1,4 @@
-Demo: http://simplider.neoligero.com
+Demo: https://neoligero.github.io/simplider/
 
 simplider 1.0
 

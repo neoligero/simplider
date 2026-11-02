@@ -230,6 +230,7 @@ function animateLeft( obj, callback){
 	var pos = obj.offsetWidth;
 	(function loop(obj, callback){
 		if(pos <= 0){
+			obj.style.left = '0px';
 			callback();
 		}
 		else{

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Simplider live demo</title>
+	<style>
+	html, body { margin: 0; padding: 0; background: transparent; }
+	#banner { width: 100%; }
+	#container { border-radius: 10px; }
+	#thumbs { padding-top: 6px; }
+	</style>
+</head>
+<body>
+
+	<div id="banner"></div>
+
+	<script src="simplider.js"></script>
+	<script>
+	// Options come from the page that embeds this demo: demo.html?fx=slide&speed=2&time=4000
+	var params = new URLSearchParams(location.search);
+	var fx = params.get('fx') === 'slide' ? 'slide' : 'fade';
+	var speed = Math.min(5, Math.max(1, Number(params.get('speed')) || 1));
+	var time = Math.min(10000, Math.max(1500, Number(params.get('time')) || 4000));
+
+	var jsonData = [{"IMAGE" : "img/dunas.jpg",  "LINK" : "#"},
+	                {"IMAGE" : "img/lago.jpg",   "LINK" : "#"},
+	                {"IMAGE" : "img/ciudad.jpg", "LINK" : "#"},
+	                {"IMAGE" : "img/bosque.jpg", "LINK" : "#"}];
+
+	slideit("banner", jsonData, fx, "100%", "56.25%", "", true, time, speed, true);
+	</script>
+</body>
+</html>
